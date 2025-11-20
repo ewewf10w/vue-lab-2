@@ -22,6 +22,6 @@ import FooterSection from './components/Footer/FooterSection.vue';
 
     <ContactSection />
 
-    <!--<FooterSection /> -->
+    <FooterSection />
   </main>
 </template>

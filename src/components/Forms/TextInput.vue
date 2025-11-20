@@ -1,14 +1,22 @@
 <script setup>
-const model = defineModel();
 defineProps({
   label: String,
   id: String,
   type: { type: String, default: 'text' },
+  placeholder: String,
   required: Boolean,
 });
 </script>
 
 <template>
-  <label :for="id" class="form-label">{{ label }}</label>
-  <input :id="id" :type="type" v-model="model" class="form-control" :required="required" />
+  <div class="mb-3">
+    <label :for="id" class="form-label">{{ label }}</label>
+    <input
+      :type="type"
+      :id="id"
+      :placeholder="placeholder"
+      class="form-control"
+      :required="required"
+    />
+  </div>
 </template>
