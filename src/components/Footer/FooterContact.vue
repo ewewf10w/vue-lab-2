@@ -1,13 +1,13 @@
-<script setup></script>
-
 <template>
-  <div>
-    <h3 class="text-white mb-3">Contact</h3>
-
-    <p class="text-white mb-1"><strong>Address:</strong> 123 Coffee Street, Klang</p>
-
-    <p class="text-white mb-1"><strong>Phone:</strong> +60 123-4567</p>
-
-    <p class="text-white"><strong>Email:</strong> info@barista.co</p>
+  <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
+    <em class="text-white d-block mb-4">Contact</em>
+    <p class="d-flex mb-1">
+      <strong class="me-2">Phone:</strong>
+      <a href="tel:305-240-9671" class="site-footer-link">(65) 305 2409 671</a>
+    </p>
+    <p class="d-flex">
+      <strong class="me-2">Email:</strong>
+      <a href="mailto:info@yourgmail.com" class="site-footer-link">hello@barista.co</a>
+    </p>
   </div>
 </template>

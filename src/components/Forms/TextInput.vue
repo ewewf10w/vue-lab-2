@@ -4,13 +4,16 @@ defineProps({
   id: String,
   type: { type: String, default: 'text' },
   placeholder: String,
-  required: Boolean,
+  required: { type: Boolean, default: false },
 });
 </script>
 
 <template>
   <div class="mb-3">
-    <label :for="id" class="form-label">{{ label }}</label>
+    <label :for="id" class="form-label">
+      {{ label }}
+      <sup v-if="required" class="text-danger">*</sup>
+    </label>
     <input
       :type="type"
       :id="id"
