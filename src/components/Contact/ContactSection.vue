@@ -8,8 +8,42 @@ import GoogleMap from './GoogleMap.vue';
   <section class="contact-section section-padding" id="section_5">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-12"></div>
+        <!-- Форма -->
+        <div class="col-lg-6 col-12">
+          <form action="#" method="post" class="custom-form contact-form" role="form">
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <TextInput label="Name" id="name" placeholder="Jackson" required />
+              </div>
 
+              <div class="col-lg-6 col-12">
+                <TextInput
+                  label="Email Address"
+                  id="email"
+                  type="email"
+                  placeholder="Jack@gmail.com"
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <Textarea
+                  label="How can we help?"
+                  id="message"
+                  placeholder="Message"
+                  rows="4"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-12 mx-auto mt-3">
+              <button type="submit" class="form-control">Send Message</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Карта -->
         <div class="col-lg-6 col-12 mt-5 mt-lg-0">
           <GoogleMap />
         </div>

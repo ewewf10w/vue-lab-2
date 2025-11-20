@@ -1,5 +1,6 @@
 <script setup>
 import TeamCard from './TeamCard.vue';
+
 const peoples = [
   {
     name: 'Steve',
@@ -35,16 +36,15 @@ const peoples = [
       <div class="row justify-content-center">
         <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
           <em class="text-white">Creative Baristas</em>
-
           <h2 class="text-white">Meet People</h2>
         </div>
 
         <div
-          v-for="people in peoples"
-          :key="people.name + people.tag"
+          v-for="person in peoples"
+          :key="person.name + person.tag"
           class="col-lg-3 col-md-6 col-12 mb-4"
         >
-          <TeamCard :person="p" />
+          <TeamCard :person="person" />
         </div>
       </div>
     </div>
