@@ -1,7 +1,12 @@
 <script setup>
+import { ref } from 'vue';
 import TextInput from '../Forms/TextInput.vue';
 import Textarea from '../Forms/TextArea.vue';
 import GoogleMap from './GoogleMap.vue';
+
+const name = ref('');
+const email = ref('');
+const message = ref('');
 </script>
 
 <template>
@@ -17,7 +22,7 @@ import GoogleMap from './GoogleMap.vue';
           <form class="custom-form contact-form" role="form">
             <div class="row">
               <div class="col-lg-6 col-12">
-                <TextInput label="Name" id="name" placeholder="Jackson" required />
+                <TextInput label="Name" v-model="name" id="name" placeholder="Jackson" required />
               </div>
               <div class="col-lg-6 col-12">
                 <TextInput
@@ -26,6 +31,7 @@ import GoogleMap from './GoogleMap.vue';
                   type="email"
                   placeholder="Jack@gmail.com"
                   required
+                  v-model="email"
                 />
               </div>
               <div class="col-12">
@@ -35,6 +41,7 @@ import GoogleMap from './GoogleMap.vue';
                   placeholder="Message"
                   rows="4"
                   required
+                  v-model="message"
                 />
               </div>
             </div>

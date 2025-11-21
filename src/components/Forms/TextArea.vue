@@ -1,4 +1,5 @@
 <script setup>
+const model = defineModel();
 defineProps({
   label: String,
   id: String,
@@ -17,6 +18,7 @@ defineProps({
       :placeholder="placeholder"
       class="form-control"
       :required="required"
+      v-model="model"
     ></textarea>
   </div>
 </template>
